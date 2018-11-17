@@ -1,3 +1,5 @@
+import * as components from './components'
+
 import './lib/polyfills';
 import './styles/common.css';
 
@@ -79,7 +81,6 @@ import './styles/common.css';
 // export { default as Touch } from './components/Touch/Touch';
 // export { default as ConfigProvider } from './components/ConfigProvider/ConfigProvider';
 
-import * as components from './components'
 
 /**
  * Utils
