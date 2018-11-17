@@ -79,6 +79,8 @@ import './styles/common.css';
 // export { default as Touch } from './components/Touch/Touch';
 // export { default as ConfigProvider } from './components/ConfigProvider/ConfigProvider';
 
+import * as components from './components'
+
 /**
  * Utils
  */
@@ -94,4 +96,15 @@ export { default as requestAnimationFrame } from './lib/requestAnimationFrame';
 export { isWebView } from './lib/webview';
 export { default as colors } from './helpers/colors';
 
-export const v = 5.80;
+const v = 5.80
+
+
+VKUI.install = function (Vue, options) {
+  Vue.use(VuetifyComponent, {
+    components,
+  })
+
+  Vue.prototype.$VKUI_VERSION = function (methodOptions) {
+    return v;
+  }
+}
