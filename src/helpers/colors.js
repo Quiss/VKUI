@@ -1,6 +1,9 @@
 import systemPalette from '../appearance/palette';
 import customPalette from '../appearance/custom_palette';
-import { resolveColor } from '../lib/colors';
+// import { resolveColor } from '../lib/colors';
+const { resolveColor } = require('../lib/colors');
+
+console.log(resolveColor);
 
 const palette = { ...systemPalette, ...customPalette };
 
