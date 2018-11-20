@@ -9,6 +9,8 @@ import '@urapywka/vkui-icons/dist/vkui-icons.css'
 
 import { platform, ANDROID, IOS } from './lib/platform';
 
+import PortalVue from 'portal-vue';
+
 /**
  * Utils
  */
@@ -28,7 +30,8 @@ export default {
   // the first argument, along with possible options
   install (Vue) {
   	for (const key in components) {
-  		Vue.component(key, components[key])
+      Vue.use(PortalVue);
+  		Vue.component(key, components[key]);
   	};
 
   	Vue.prototype.$VKUI_OSNAME = platform();
