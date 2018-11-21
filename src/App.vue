@@ -1,6 +1,7 @@
 <template>
+  <Root>
 	<Panel id="new-user" theme="white">
-    <PanelHeader>Регистрация</PanelHeader>
+    <PanelHeader>Регистрация1</PanelHeader>
     <FormLayout>
       <Input type="email" top="E-mail" />
       <FormLayoutGroup top="Пароль" bottom="Пароль может содержать только латинские буквы и цифры.">
@@ -21,11 +22,12 @@
       <FormLayoutGroup>
         <Checkbox>Согласен со всем <Link>этим</Link></Checkbox>
         <div>
-          <Button type="cell">Зарегистрироваться</Button>
+          <CellButton>Зарегистрироваться</CellButton>
         </div>
       </FormLayoutGroup>
     </FormLayout>
   </Panel>
+  </Root>
 </template>
 
 <script>

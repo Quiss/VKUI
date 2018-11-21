@@ -14,7 +14,7 @@
         <span v-if="isPrimitive && !!$slots.children"><slot name="children"></slot></span>
         <span v-else-if="isPrimitive"><slot></slot></span>
         <slot v-else-if="!!$slots.children"><slot name="children"></slot></slot>
-        <slot v-else></slot>
+        <slot v-else>11</slot>
       </div>
     </portal>
     <portal :to="'header-right-' + panel" v-if="state.ready && webviewType === 'internal'">
