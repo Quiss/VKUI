@@ -25,17 +25,39 @@ export { default as getClassName } from './helpers/getClassName';
 export { default as requestAnimationFrame } from './lib/requestAnimationFrame';
 export { isWebView } from './lib/webview';
 
-export default {
-  // The install method will be called with the Vue constructor as         
+// The install method will be called with the Vue constructor as         
   // the first argument, along with possible options
-  install (Vue) {
-  	for (const key in components) {
-      Vue.use(PortalVue);
-  		Vue.component(key, components[key]);
-  	};
+function install (Vue) {
+  if (install.installed) return;
+  install.installed = true;
 
-  	Vue.prototype.$VKUI_OSNAME = platform();
-  	Vue.prototype.$VKUI_ANDRIOD = ANDROID;
-  	Vue.prototype.$VKUI_IOS = IOS;
+  Vue.use(PortalVue);
+
+  for (const key in components) {
+    Vue.component(key, components[key]);
   }
+
+  Vue.prototype.$VKUI_OSNAME = platform();
+  Vue.prototype.$VKUI_ANDRIOD = ANDROID;
+  Vue.prototype.$VKUI_IOS = IOS;
+}
+
+// Создание значения модуля для Vue.use()
+const plugin = {
+  install
+};
+
+// Автоматическая установка, когда vue найден (например в браузере с помощью тега <script>)
+let GlobalVue = null;
+if (typeof window !== 'undefined') {
+  GlobalVue = window.Vue;
+} else if (typeof global !== 'undefined') {
+  GlobalVue = global.Vue;
+}
+if (GlobalVue) {
+  GlobalVue.use(plugin);
+}
+
+export default {
+  install
 }

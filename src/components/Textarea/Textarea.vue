@@ -24,6 +24,7 @@ const baseClassName = getClassName('Textarea');
 export default {
   data: () => ({
     element: null,
+    height: 66
   }),
   computed: {
     isANDROID () {
@@ -36,6 +37,7 @@ export default {
   props: {
     value: {
       type: String,
+      default: '',
     },
     defaultValue: {
       type: String,
@@ -59,6 +61,19 @@ export default {
     }
   },
   methods: {
+    onChangeMethod(e) {
+      if (this.props.grow) {
+        this.resize();
+      }
+
+      if (!this.value !== '') {
+        this.setState({ value: e.target.value });
+      }
+
+      if (this.props.onChange) {
+        this.props.onChange(e);
+      }
+    },
     resize () {
       const el = this.element;
 

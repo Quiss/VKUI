@@ -1,5 +1,4 @@
 <template>
-  <Root>
     <VKView activePanel='new-user'>
     	<Panel id="new-user" theme="white">
         <PanelHeader>Регистрация1</PanelHeader>
@@ -29,7 +28,6 @@
         </FormLayout>
       </Panel>
     </VKView>
-  </Root>
 </template>
 
 <script>

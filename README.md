@@ -1,29 +1,11 @@
-# my-vue-library
-
-## Project setup
 ```
-npm install
+npm i @quiss/vkui --save
 ```
 
-### Compiles and hot-reloads for development
 ```
-npm run serve
-```
+import VKUI from '@quiss/vkui';
 
-### Compiles and minifies for production
-```
-npm run build
-```
+import '@quiss/vkui/dist/VKUI.css';
 
-### Run your tests
+Vue.use(VKUI);
 ```
-npm run test
-```
-
-### Lints and fixes files
-```
-npm run lint
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
