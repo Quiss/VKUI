@@ -13,6 +13,13 @@
     "*.json",
     "*.js"
   ],
+  "homepage": "https://github.com/quiss/VKUI",
+  "keywords": [
+    "vkui",
+    "vue",
+    "vkontakte",
+    "vk"
+  ],
   "main": "./dist/VKUI.common.js",
   "dependencies": {
     "@urapywka/vkui-icons": "^0.1.11",
