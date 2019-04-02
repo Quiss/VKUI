@@ -62,16 +62,17 @@ export default {
   },
   methods: {
     onChangeMethod(e) {
-      if (this.props.grow) {
+      if (this.grow) {
         this.resize();
       }
 
-      if (!this.value !== '') {
-        this.setState({ value: e.target.value });
-      }
+      // ???
+      // if (!this.value !== '') {
+      //   this.setState({ value: e.target.value });
+      // }
 
-      if (this.props.onChange) {
-        this.props.onChange(e);
+      if (this.onChange) {
+        this.onChange(e);
       }
     },
     resize () {

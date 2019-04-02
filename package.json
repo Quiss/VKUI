@@ -22,12 +22,12 @@
   ],
   "main": "./dist/VKUI.common.js",
   "dependencies": {
-    "@urapywka/vkui-icons": "^0.1.11",
+    "@urapywka/vkui-icons": "^0.1.14",
+    "@vkontakte/vkui-connect-promise": "^0.1.19",
     "portal-vue": "^1.5.1",
     "vue": "^2.6.10"
   },
   "devDependencies": {
-    "@vkontakte/vkui-connect": "^1.1.2",
     "@vue/cli-plugin-babel": "^3.1.1",
     "@vue/cli-plugin-eslint": "^3.1.5",
     "@vue/cli-service": "^3.5.3",
