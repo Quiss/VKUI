@@ -31,6 +31,8 @@
 </template>
 
 <script>
+import connect from '@vkontakte/vkui-connect-promise';
+import { isWebView } from './lib/webview';
 
 export default {
   name: 'app',
@@ -41,7 +43,10 @@ export default {
   },
   mounted() {
   	console.log(this.$VKUI_OSNAME);
+    console.log(isWebView);
   	document.body.setAttribute("scheme", "client_light");
+ 
+    connect.send('VKWebAppInit', {}).then(data => handleResponse(data)).catch(error => handleError(error));
   },
   components: {}
 }
