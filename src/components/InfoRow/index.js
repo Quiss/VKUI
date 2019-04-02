@@ -1,4 +1,4 @@
-import FormLayout from './FormLayout'
+import InfoRow from './InfoRow'
 
-export { FormLayout }
-export default FormLayout
+export { InfoRow }
+export default InfoRow

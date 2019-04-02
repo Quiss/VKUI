@@ -1,4 +1,4 @@
-import FormLayout from './FormLayout'
+import SelectMimicry from './SelectMimicry'
 
-export { FormLayout }
-export default FormLayout
+export { SelectMimicry }
+export default SelectMimicry

@@ -1,4 +1,4 @@
-import FormLayout from './FormLayout'
+import Slider from './Slider'
 
-export { FormLayout }
-export default FormLayout
+export { Slider }
+export default Slider

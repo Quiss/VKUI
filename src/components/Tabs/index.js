@@ -1,4 +1,4 @@
-import FormLayout from './FormLayout'
+import Tabs from './Tabs'
 
-export { FormLayout }
-export default FormLayout
+export { Tabs }
+export default Tabs

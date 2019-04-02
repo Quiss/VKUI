@@ -23,8 +23,8 @@
   "main": "./dist/VKUI.common.js",
   "dependencies": {
     "@urapywka/vkui-icons": "^0.1.11",
-    "portal-vue": "^1.4.0",
-    "vue": "^2.5.17"
+    "portal-vue": "^1.5.1",
+    "vue": "^2.6.10"
   },
   "devDependencies": {
     "@vkontakte/vkui-connect": "^1.1.2",
@@ -34,9 +34,9 @@
     "babel-eslint": "^10.0.1",
     "babel-plugin-transform-class-properties": "^6.23.0",
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
-    "eslint": "^5.8.0",
-    "eslint-plugin-vue": "^5.0.0-0",
-    "vue-template-compiler": "^2.5.17"
+    "eslint": "^5.16.0",
+    "eslint-plugin-vue": "^5.2.2",
+    "vue-template-compiler": "^2.6.10"
   },
   "eslintConfig": {
     "root": true,

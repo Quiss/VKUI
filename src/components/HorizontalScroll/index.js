@@ -1,4 +1,4 @@
-import FormLayout from './FormLayout'
+import HorizontalScroll from './HorizontalScroll'
 
-export { FormLayout }
-export default FormLayout
+export { HorizontalScroll }
+export default HorizontalScroll

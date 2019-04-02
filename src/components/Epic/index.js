@@ -1,4 +1,4 @@
-import FormLayout from './FormLayout'
+import Epic from './Epic'
 
-export { FormLayout }
-export default FormLayout
+export { Epic }
+export default Epic

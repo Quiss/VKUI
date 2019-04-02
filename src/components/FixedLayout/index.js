@@ -1,4 +1,4 @@
-import FormLayout from './FormLayout'
+import FixedLayout from './FixedLayout'
 
-export { FormLayout }
-export default FormLayout
+export { FixedLayout }
+export default FixedLayout

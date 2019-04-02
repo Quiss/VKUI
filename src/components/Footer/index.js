@@ -1,4 +1,4 @@
-import FormLayout from './FormLayout'
+import Footer from './Footer'
 
-export { FormLayout }
-export default FormLayout
+export { Footer }
+export default Footer

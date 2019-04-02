@@ -1,4 +1,4 @@
-import FormLayout from './FormLayout'
+import Tappable from './Tappable'
 
-export { FormLayout }
-export default FormLayout
+export { Tappable }
+export default Tappable

@@ -1,4 +1,4 @@
-import FormLayout from './FormLayout'
+import Header from './Header'
 
-export { FormLayout }
-export default FormLayout
+export { Header }
+export default Header

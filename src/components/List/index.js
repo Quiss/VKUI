@@ -1,4 +1,4 @@
-import FormLayout from './FormLayout'
+import List from './List'
 
-export { FormLayout }
-export default FormLayout
+export { List }
+export default List

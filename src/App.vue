@@ -1,7 +1,7 @@
 <template>
     <VKView activePanel='new-user'>
     	<Panel id="new-user" theme="white">
-        <PanelHeader>Регистрация1</PanelHeader>
+        <PanelHeader>Регистрация</PanelHeader>
         <FormLayout>
           <Input type="email" top="E-mail" />
           <FormLayoutGroup top="Пароль" bottom="Пароль может содержать только латинские буквы и цифры.">

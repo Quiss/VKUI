@@ -11,7 +11,7 @@
 <script>
 import getClassName from '../../helpers/getClassName';
 import classnames from '../../lib/classnames';
-import { transitionEndEventName, transitionStartEventName } from '../VKView/VKView';
+import { transitionEndEventName, transitionStartEventName } from '../View/View';
 import { tabbarHeight } from '../../appearance/constants';
 
 const baseClassName = getClassName('FixedLayout');

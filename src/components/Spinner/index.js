@@ -1,4 +1,4 @@
-import FormLayout from './FormLayout'
+import Spinner from './Spinner'
 
-export { FormLayout }
-export default FormLayout
+export { Spinner }
+export default Spinner

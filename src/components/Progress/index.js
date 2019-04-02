@@ -1,4 +1,4 @@
-import FormLayout from './FormLayout'
+import Progress from './Progress'
 
-export { FormLayout }
-export default FormLayout
+export { Progress }
+export default Progress

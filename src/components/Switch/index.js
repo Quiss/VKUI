@@ -1,4 +1,4 @@
-import FormLayout from './FormLayout'
+import Switch from './Switch'
 
-export { FormLayout }
-export default FormLayout
+export { Switch }
+export default Switch

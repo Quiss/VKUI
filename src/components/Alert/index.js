@@ -1,4 +1,4 @@
-import FormLayout from './FormLayout'
+import Alert from './Alert'
 
-export { FormLayout }
-export default FormLayout
+export { Alert }
+export default Alert

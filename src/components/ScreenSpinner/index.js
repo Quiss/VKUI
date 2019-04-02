@@ -1,4 +1,4 @@
-import FormLayout from './FormLayout'
+import ScreenSpinner from './ScreenSpinner'
 
-export { FormLayout }
-export default FormLayout
+export { ScreenSpinner }
+export default ScreenSpinner

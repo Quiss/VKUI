@@ -1,4 +1,4 @@
-import FormLayout from './FormLayout'
+import Cell from './Cell'
 
-export { FormLayout }
-export default FormLayout
+export { Cell }
+export default Cell

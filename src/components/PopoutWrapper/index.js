@@ -1,4 +1,4 @@
-import FormLayout from './FormLayout'
+import PopoutWrapper from './PopoutWrapper'
 
-export { FormLayout }
-export default FormLayout
+export { PopoutWrapper }
+export default PopoutWrapper

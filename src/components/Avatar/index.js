@@ -1,4 +1,4 @@
-import FormLayout from './FormLayout'
+import Avatar from './Avatar'
 
-export { FormLayout }
-export default FormLayout
+export { Avatar }
+export default Avatar

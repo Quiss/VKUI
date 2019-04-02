@@ -1,4 +1,4 @@
-import FormLayout from './FormLayout'
+import PanelHeaderContent from './PanelHeaderContent'
 
-export { FormLayout }
-export default FormLayout
+export { PanelHeaderContent }
+export default PanelHeaderContent

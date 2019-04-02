@@ -1,4 +1,4 @@
-import FormLayout from './FormLayout'
+import File from './File'
 
-export { FormLayout }
-export default FormLayout
+export { File }
+export default File

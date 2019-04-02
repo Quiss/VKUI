@@ -1,4 +1,4 @@
-import FormLayout from './FormLayout'
+import Gallery from './Gallery'
 
-export { FormLayout }
-export default FormLayout
+export { Gallery }
+export default Gallery

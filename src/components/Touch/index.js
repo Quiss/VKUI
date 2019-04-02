@@ -1,4 +1,4 @@
-import FormLayout from './FormLayout'
+import Touch from './Touch'
 
-export { FormLayout }
-export default FormLayout
+export { Touch }
+export default Touch

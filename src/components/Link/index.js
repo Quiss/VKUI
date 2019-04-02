@@ -1,4 +1,4 @@
-import FormLayout from './FormLayout'
+import Link from './Link'
 
-export { FormLayout }
-export default FormLayout
+export { Link }
+export default Link

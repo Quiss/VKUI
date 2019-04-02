@@ -1,4 +1,4 @@
-import FormLayout from './FormLayout'
+import Div from './Div'
 
-export { FormLayout }
-export default FormLayout
+export { Div as VKDiv }
+export default Div
