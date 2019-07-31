@@ -1,4 +1,4 @@
 import Div from './Div'
 
-export { Div as VKDiv }
+export { Div }
 export default Div

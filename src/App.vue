@@ -1,32 +1,32 @@
 <template>
     <VKView activePanel='new-user'>
-    	<Panel id="new-user" theme="white">
-        <PanelHeader>Регистрация</PanelHeader>
-        <FormLayout>
-          <Input type="email" top="E-mail" />
-          <FormLayoutGroup top="Пароль" bottom="Пароль может содержать только латинские буквы и цифры.">
-            <Input type="password"  placeholder="Введите пароль" />
-            <Input type="password" placeholder="Повторите пароль" />
-          </FormLayoutGroup>
-          <Input top="Имя" />
-          <Input top="Фамилия" />
-          <Select top="Пол" placeholder="Выберите пол">
+    	<VKPanel id="new-user" theme="white">
+        <VKPanelHeader>Регистрация</VKPanelHeader>
+        <VKFormLayout>
+          <VKInput type="email" top="E-mail" />
+          <VKFormLayoutGroup top="Пароль" bottom="Пароль может содержать только латинские буквы и цифры.">
+            <VKInput type="password"  placeholder="Введите пароль" />
+            <VKInput type="password" placeholder="Повторите пароль" />
+          </VKFormLayoutGroup>
+          <VKInput top="Имя" />
+          <VKInput top="Фамилия" />
+          <VKSelect top="Пол" placeholder="Выберите пол">
             <option value="m">Мужской</option>
             <option value="f">Женский</option>
-          </Select>
-          <div top="Тип документа">
-            <Radio name="type">Паспорт</Radio>
-            <Radio name="type">Загран</Radio>
-          </div>
-          <Textarea top="О себе" />
-          <FormLayoutGroup>
-            <Checkbox>Согласен со всем <Link>этим</Link></Checkbox>
-            <div>
-              <CellButton>Зарегистрироваться</CellButton>
-            </div>
-          </FormLayoutGroup>
-        </FormLayout>
-      </Panel>
+          </VKSelect>
+          <VKDiv top="Тип документа">
+            <VKRadio name="type">Паспорт</VKRadio>
+            <VKRadio name="type">Загран</VKRadio>
+          </VKDiv>
+          <VKTextarea top="О себе" />
+          <VKFormLayoutGroup>
+            <VKCheckbox>Согласен со всем <VKLink>этим</VKLink></VKCheckbox>
+            <VKDiv>
+              <VKCellButton>Зарегистрироваться</VKCellButton>
+            </VKDiv>
+          </VKFormLayoutGroup>
+        </VKFormLayout>
+      </VKPanel>
     </VKView>
 </template>
 

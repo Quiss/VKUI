@@ -1,4 +1,4 @@
 import View from './View'
 
-export { View as VKView }
+export { View }
 export default View

@@ -34,7 +34,7 @@ function install (Vue) {
   Vue.use(PortalVue);
 
   for (const key in components) {
-    Vue.component(key, components[key]);
+    Vue.component(`VK${key}`, components[key]);
   }
 
   Vue.prototype.$VKUI_OSNAME = platform();

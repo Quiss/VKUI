@@ -107,7 +107,7 @@
   }
 
 .ActionSheet--ios .ActionSheetItem--default {
-  color: var(--accent);
+  color: var(--action_sheet_action_foreground);
   }
 
 .ActionSheet--ios .ActionSheetItem--destructive {
@@ -118,9 +118,8 @@
   display: block;
   width: auto;
   margin-top: 7px;
-  margin-bottom: constant(safe-area-inset-bottom);
-  margin-bottom: env(safe-area-inset-bottom);
-  color: var(--accent);
+  margin-bottom: var(--safe-area-inset-bottom);
+  color: var(--action_sheet_action_foreground);
   font-weight: 600;
   border-top-left-radius: 14px;
   border-top-right-radius: 14px;

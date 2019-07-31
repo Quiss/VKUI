@@ -49,6 +49,7 @@
   content: '';
   bottom: 0;
   background: var(--separator_common);
+  transform-origin: center bottom;
   }
 
 .FixedLayout--ios.FixedLayout--bottom .Tabs::before {
@@ -58,8 +59,23 @@
   z-index: 1;
   height: 1px;
   content: '';
-  top: 0;
+  bottom: 100%;
   background: var(--separator_common);
+  transform-origin: center bottom;
+  }
+
+@media (min-resolution: 2dppx) {
+  .FixedLayout--ios.FixedLayout--top .Tabs::before,
+  .FixedLayout--ios.FixedLayout--bottom .Tabs::before {
+    transform: scaleY(.5);
+    }
+  }
+
+@media (min-resolution: 3dppx) {
+  .FixedLayout--ios.FixedLayout--top .Tabs::before,
+  .FixedLayout--ios.FixedLayout--bottom .Tabs::before {
+    transform: scaleY(.33);
+    }
   }
 
 .FixedLayout--ios.FixedLayout--top .Tabs--light.Tabs--buttons {
@@ -95,16 +111,6 @@
   content: '';
   }
 
-@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi), (min-resolution: 2dppx) {
-  .FixedLayout--ios.FixedLayout--top .Tabs::before {
-    background: linear-gradient(to top, var(--separator_common) 50%, transparent 50%);
-    }
-
-  .FixedLayout--ios.FixedLayout--bottom .Tabs::before {
-    background: linear-gradient(to bottom, var(--separator_common) 50%, transparent 50%);
-    }
-  }
-
 /*
   Android
  */
@@ -136,4 +142,52 @@
 
 .FixedLayout--android.FixedLayout--bottom .Tabs {
   background: var(--header_alternate_background);
+  }
+
+/**
+ * Counter inside TabsItem
+ */
+.Tabs--android.Tabs--light .TabsItem .Counter {
+  background: var(--counter_secondary_background);
+  color: var(--counter_secondary_text);
+  }
+
+.Tabs--android.Tabs--light .TabsItem--selected .Counter {
+  background: var(--counter_primary_background);
+  color: var(--counter_primary_text);
+  }
+
+.Tabs--ios.Tabs--light .TabsItem .Counter {
+  background: var(--segmented_control_tint);
+  color: var(--background_content);
+  }
+
+.Tabs--ios.Tabs--light .TabsItem--selected .Counter {
+  background: var(--background_content);
+  color: var(--segmented_control_tint);
+  }
+
+.Tabs--ios.Tabs--buttons.Tabs--light .TabsItem .Counter {
+  background: var(--panel_tab_inactive_text);
+  color: var(--white);
+  }
+
+.Tabs--ios.Tabs--buttons.Tabs--light .TabsItem--selected .Counter {
+  background: var(--panel_tab_active_text);
+  color: var(--panel_tab_active_background);
+  }
+
+.Tabs--buttons.Tabs--header .TabsItem .Counter {
+  background: var(--header_tab_inactive_text);
+  color: var(--header_background);
+  }
+
+.Tabs--buttons.Tabs--header .TabsItem .Counter {
+  background: var(--header_tab_inactive_text);
+  color: var(--header_background);
+  }
+
+.Tabs--buttons.Tabs--header .TabsItem--selected .Counter {
+  background: var(--header_tab_active_text);
+  color: var(--header_background);
   }
