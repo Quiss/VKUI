@@ -37,7 +37,7 @@ import { isWebView } from './lib/webview';
 export default {
   name: 'app',
   data: () => {
-  	return { 
+  	return {
   		activePanel: 'panel1'
   	}
   },
@@ -45,7 +45,7 @@ export default {
   	console.log(this.$VKUI_OSNAME);
     console.log(isWebView);
   	document.body.setAttribute("scheme", "client_light");
- 
+
     connect.send('VKWebAppInit', {}).then(data => handleResponse(data)).catch(error => handleError(error));
   },
   components: {}

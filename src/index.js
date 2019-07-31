@@ -14,18 +14,13 @@ import PortalVue from 'portal-vue';
 /**
  * Utils
  */
-export { default as classnames } from './lib/classnames';
-export { default as keyframes } from './lib/keyframes';
+export { default as classNames } from './lib/classnames';
 export { getOffsetRect } from './lib/offset';
 export { platform, ANDROID, IOS } from './lib/platform';
-export { default as removeObjectKeys } from './lib/removeObjectKeys';
-export { default as request } from './lib/request';
-export { default as querystring } from './lib/querystring';
 export { default as getClassName } from './helpers/getClassName';
-export { default as requestAnimationFrame } from './lib/requestAnimationFrame';
 export { isWebView } from './lib/webview';
 
-// The install method will be called with the Vue constructor as         
+// The install method will be called with the Vue constructor as
   // the first argument, along with possible options
 function install (Vue) {
   if (install.installed) return;

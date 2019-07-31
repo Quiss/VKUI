@@ -13,6 +13,16 @@
     <div class="Input-underline" v-if="isANDROID"></div>
     <div class="Input__placeholder" v-if="customPlaceholder && !value">{{ placeholder }}</div>
   </div>
+
+  <VKFormField
+          className={classNames('Input', className, {
+          [`Input--${alignment}`]: alignment
+          })}
+          status={status}
+          getRootRef={getRootRef}
+  >
+    <input {...restProps} className="Input__el" ref={getRef} />
+  </VKFormField>
 </template>
 
 <script>
@@ -25,7 +35,7 @@ const baseClassName = getClassName('Input');
 
 export default {
   data: () => ({
-    
+
   }),
   inject: {
     isWebView: {
