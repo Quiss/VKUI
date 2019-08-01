@@ -1,27 +1,15 @@
 <template>
-  <div :class="classNames">
+  <VKFormField :class="classNames">
     <input
-      v-bind="$attrs"
-      class="Input__el"
-      ref="input"
-      :type="type"
-      :placeholder="customPlaceholder ? null : placeholder"
-      :value="value"
-      @input="changeHandler"
-      @focus="focusHandler"
+            v-bind="$attrs"
+            class="Input__el"
+            ref="input"
+            :type="type"
+            :placeholder="customPlaceholder ? null : placeholder"
+            :value="value"
+            @input="changeHandler"
+            @focus="focusHandler"
     />
-    <div class="Input-underline" v-if="isANDROID"></div>
-    <div class="Input__placeholder" v-if="customPlaceholder && !value">{{ placeholder }}</div>
-  </div>
-
-  <VKFormField
-          className={classNames('Input', className, {
-          [`Input--${alignment}`]: alignment
-          })}
-          status={status}
-          getRootRef={getRootRef}
-  >
-    <input {...restProps} className="Input__el" ref={getRef} />
   </VKFormField>
 </template>
 
@@ -37,6 +25,9 @@ export default {
   data: () => ({
 
   }),
+  components: {
+    Tappable,
+  },
   inject: {
     isWebView: {
       type: Boolean,
