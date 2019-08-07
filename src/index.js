@@ -13,6 +13,7 @@ import FixedLayout from './components/FixedLayout/FixedLayout';
 import Footer from './components/Footer/Footer';
 import FormField from './components/FormField/FormField';
 import FormLayout from './components/FormLayout/FormLayout';
+import FormStatus from './components/FormStatus/FormStatus';
 import FormLayoutGroup from './components/FormLayoutGroup/FormLayoutGroup';
 import Gallery from './components/Gallery/Gallery';
 import Group from './components/Group/Group';
@@ -89,6 +90,7 @@ function install(Vue) {
     Vue.component(`VKFooter`, Footer);
     Vue.component(`VKFormField`, FormField);
     Vue.component(`VKFormLayout`, FormLayout);
+    Vue.component(`VKFormStatus`, FormStatus);
     Vue.component(`VKFormLayoutGroup`, FormLayoutGroup);
     Vue.component(`VKGallery`, Gallery);
     Vue.component(`VKGroup`, Group);

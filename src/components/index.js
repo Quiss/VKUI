@@ -12,6 +12,7 @@ export * from './File';
 export * from './FixedLayout';
 export * from './Footer';
 export * from './FormField';
+export * from './FormStatus';
 export * from './FormLayout';
 export * from './FormLayoutGroup';
 export * from './Gallery';

@@ -40,10 +40,9 @@ export default {
     },
     classNames () {
       const modifiers = {
-        'Input--left': this.alignment === 'left',
         'Input--center': this.alignment === 'center',
         'Input--right': this.alignment === 'right',
-        [`Input--s-${this.status}`]: true
+        [`FormField--s-${this.status}`]: true
       };
       return classnames(baseClassName, modifiers)
     },
@@ -78,7 +77,7 @@ export default {
       type: String,
       required: false,
       default: 'default',
-      validator: (v) => ['default', 'error', 'verified'].indexOf(v) >= 0
+      validator: (v) => ['default', 'error', 'valid'].indexOf(v) >= 0
     },
   },
   methods: {

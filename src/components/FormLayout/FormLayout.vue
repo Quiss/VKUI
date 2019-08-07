@@ -1,6 +1,7 @@
 <script>
 import getClassName from '../../helpers/getClassName';
 import classnames from '../../lib/classnames'
+import _ from 'lodash';
 
 const baseClassName = getClassName('FormLayout');
 
@@ -23,11 +24,11 @@ export default {
           },
           []
           .concat(
-            this.$slots.default.map((field, i) => {
+            this.$slots.default.map((field) => {
               return field && field.data ? createElement(
                 'div',
                 {
-                  class: 'FormLayout__row'
+                  class: `FormLayout__row ${_.has(field, 'componentOptions.propsData.status') ? `FormLayout__row--s-${_.get(field, 'componentOptions.propsData.status')}` : ''}`
                 },
                 [
                   field.data.attrs && field.data.attrs.top && createElement(
