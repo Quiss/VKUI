@@ -1,5 +1,5 @@
-export function brToNl (str = '') {
-  const regex = /<br\s*\/?>/gi;
+export function brToNl(str = '') {
+    const regex = /<br\s*\/?>/gi;
 
-  return str.replace(regex, '\n');
+    return str.replace(regex, '\n');
 }

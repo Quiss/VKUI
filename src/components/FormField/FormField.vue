@@ -1,7 +1,7 @@
 <template>
     <div :class="classNames">
         <slot></slot>
-        <div class="FormField__border" />
+        <div class="FormField__border"/>
     </div>
 </template>
 
@@ -20,7 +20,7 @@
             },
         },
         computed: {
-            classNames () {
+            classNames() {
                 return classnames(baseClassName, this.parentClassNames)
             },
         }

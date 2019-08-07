@@ -1,38 +1,38 @@
 :root {
-  /* fonts */
-  --font-ios: -apple-system, Helvetica Neue, Arial;
-  --font-android: Roboto, Arial;
-  --font-common: -apple-system, Roboto, Helvetica Neue, Arial;
+    /* fonts */
+    --font-ios: -apple-system, Helvetica Neue, Arial;
+    --font-android: Roboto, Arial;
+    --font-common: -apple-system, Roboto, Helvetica Neue, Arial;
 
-  /* easings */
-  --ios-easing: cubic-bezier(.36, .66, .04, 1);
-  --android-easing: cubic-bezier(.4, 0, .2, 1);
+    /* easings */
+    --ios-easing: cubic-bezier(.36, .66, .04, 1);
+    --android-easing: cubic-bezier(.4, 0, .2, 1);
 
-  /* sizes */
-  --tabbar_height: 48px;
-  --panelheader_height_ios: 44px;
-  --panelheader_height_android: 56px;
-  --modalheader_height_ios: 52px;
-  --modalheader_height_android: 56px;
+    /* sizes */
+    --tabbar_height: 48px;
+    --panelheader_height_ios: 44px;
+    --panelheader_height_android: 56px;
+    --modalheader_height_ios: 52px;
+    --modalheader_height_android: 56px;
 
-  /* colors */
-  --white: #fff;
+    /* colors */
+    --white: #fff;
 
-  /* iOS insets */
-  --safe-area-inset-top: 20px;
-  --safe-area-inset-bottom: 0px;
+    /* iOS insets */
+    --safe-area-inset-top: 20px;
+    --safe-area-inset-bottom: 0px;
 }
 
 @supports (padding-top: constant(safe-area-inset-top)) {
-  :root {
-    --safe-area-inset-top: constant(safe-area-inset-top);
-    --safe-area-inset-bottom: constant(safe-area-inset-bottom);
-  }
+    :root {
+        --safe-area-inset-top: constant(safe-area-inset-top);
+        --safe-area-inset-bottom: constant(safe-area-inset-bottom);
+    }
 }
 
 @supports (padding-top: env(safe-area-inset-top)) {
-  :root {
-    --safe-area-inset-top: env(safe-area-inset-top);
-    --safe-area-inset-bottom: env(safe-area-inset-bottom);
-  }
+    :root {
+        --safe-area-inset-top: env(safe-area-inset-top);
+        --safe-area-inset-bottom: env(safe-area-inset-bottom);
+    }
 }

@@ -1,31 +1,31 @@
 <template>
-  <div v-bind="$attrs" :class="classNames">
-    <div class="Progress__bg" />
-    <div class="Progress__in" :style="{ width: `${value > 100 ? 100 : value}%` }" />
-  </div>
+    <div :class="classNames" v-bind="$attrs">
+        <div class="Progress__bg"/>
+        <div :style="{ width: `${value > 100 ? 100 : value}%` }" class="Progress__in"/>
+    </div>
 </template>
 
 <script>
-import getClassName from '../../helpers/getClassName';
-import classnames from '../../lib/classnames'
+    import getClassName from '../../helpers/getClassName';
+    import classnames from '../../lib/classnames'
 
-const baseClassName = getClassName('Progress');
+    const baseClassName = getClassName('Progress');
 
-export default {
-  computed: {
-    classNames () {
-      return classnames(baseClassName)
-    },
-  },
-  props: {
-    value: {
-      type: Number,
-      default: 0,
-    },
-  },
-}
+    export default {
+        computed: {
+            classNames() {
+                return classnames(baseClassName)
+            },
+        },
+        props: {
+            value: {
+                type: Number,
+                default: 0,
+            },
+        },
+    }
 </script>
 
 <style>
-@import './Progress.css';
+    @import './Progress.css';
 </style>

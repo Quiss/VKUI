@@ -1,10 +1,10 @@
 <script>
-import getClassName from '../../helpers/getClassName';
-import classnames from '../../lib/classnames';
-import transitionEvents from '../../lib/transitionEvents';
-import { ANDROID, platform } from '../../lib/platform';
+    import getClassName from '../../helpers/getClassName';
+    import classnames from '../../lib/classnames';
+    import transitionEvents from '../../lib/transitionEvents';
+    import {ANDROID, platform} from '../../lib/platform';
 
-const osname = platform();
+    const osname = platform();
 const baseClassName = getClassName('Root');
 
 export default {

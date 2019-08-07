@@ -1,10 +1,10 @@
 .FormLayoutGroup > * ~ * {
-  margin-top: 12px;
-  }
+    margin-top: 12px;
+}
 
 .FormLayoutGroup > .Radio,
 .FormLayoutGroup > .Checkbox,
 .FormLayoutGroup > .Cell,
 .FormLayoutGroup > .CellButton {
-  margin-top: 0;
-  }
+    margin-top: 0;
+}

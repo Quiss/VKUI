@@ -1,80 +1,80 @@
 .CellButton {
-  display: block;
-  box-sizing: border-box;
-  outline: none;
-  text-decoration: none;
-  margin: 0;
-  padding: 0;
-  border: none;
-  cursor: default;
-  width: 100%;
-  background: transparent;
-  position: relative;
-  }
+    display: block;
+    box-sizing: border-box;
+    outline: none;
+    text-decoration: none;
+    margin: 0;
+    padding: 0;
+    border: none;
+    cursor: default;
+    width: 100%;
+    background: transparent;
+    position: relative;
+}
 
 .CellButton[disabled] {
-  opacity: .4;
-  }
+    opacity: .4;
+}
 
 .CellButton__in {
-  display: flex;
-  align-items: center;
-  }
+    display: flex;
+    align-items: center;
+}
 
 .CellButton--aln-left .CellButton__in {
-  justify-content: flex-start;
-  }
+    justify-content: flex-start;
+}
 
 .CellButton--aln-center .CellButton__in {
-  justify-content: center;
-  }
+    justify-content: center;
+}
 
 .CellButton--aln-right .CellButton__in {
-  justify-content: flex-end;
-  }
+    justify-content: flex-end;
+}
 
 .CellButton.Tappable--active {
-  z-index: 2;
-  }
+    z-index: 2;
+}
 
 .CellButton--lvl-primary {
-  color: var(--accent);
-  }
+    color: var(--accent);
+}
 
 .CellButton--lvl-danger {
-  color: var(--destructive);
-  }
+    color: var(--destructive);
+}
 
 /*
   iOS
  */
 .CellButton--ios {
-  padding: 0 12px;
-  }
+    padding: 0 12px;
+}
 
 .CellButton .CellButton__content {
-  line-height: 20px;
-  font-size: 17px;
-  padding: 12px 0;
-  }
+    line-height: 20px;
+    font-size: 17px;
+    padding: 12px 0;
+}
 
 .CellButton--ios .CellButton__before .Icon {
-  margin-right: 12px;
-  }
+    margin-right: 12px;
+}
 
 /*
   Android
  */
 .CellButton--android {
-  padding: 0 16px;
-  }
+    padding: 0 16px;
+}
 
 .CellButton--android .CellButton__content {
-  font-size: 16px;
-  line-height: 20px;
-  padding: 14px 0;
-  }
+    font-size: 16px;
+    line-height: 20px;
+    padding: 14px 0;
+}
 
 .CellButton--android .CellButton__before .Icon {
-  margin-right: 12px;
-  }
+    margin-right: 12px;
+}

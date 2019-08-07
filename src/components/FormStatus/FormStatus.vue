@@ -34,7 +34,7 @@
 
                 return classnames(baseClassName, modifiers)
             },
-            hasDefaultSlot () {
+            hasDefaultSlot() {
                 return !!this.$slots.default
             },
         }

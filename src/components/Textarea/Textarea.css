@@ -1,8 +1,8 @@
 .Textarea {
-  position: relative;
-  }
+    position: relative;
+}
 
-  .Textarea textarea {
+.Textarea textarea {
     margin: 0;
     width: 100%;
     display: block;
@@ -20,12 +20,12 @@
     z-index: 2;
     position: relative;
     background: transparent;
-    }
+}
 
-  .Textarea textarea::placeholder {
+.Textarea textarea::placeholder {
     color: var(--field_text_placeholder);
-    }
+}
 
-  .Textarea textarea:disabled {
+.Textarea textarea:disabled {
     opacity: .6;
-    }
+}

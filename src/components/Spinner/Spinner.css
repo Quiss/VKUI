@@ -1,38 +1,38 @@
 :root {
-  --duration: .7s;
+    --duration: .7s;
 }
 
 .Spinner {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  }
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 .Spinner--ios {
-  color: var(--activity_indicator_tint);
-  }
+    color: var(--activity_indicator_tint);
+}
 
 .Spinner--android {
-  color: var(--accent);
-  }
+    color: var(--accent);
+}
 
 .PanelHeader .Spinner {
-  color: currentColor;
-  }
+    color: currentColor;
+}
 
-  .Spinner__self {
+.Spinner__self {
     animation: rotator var(--duration) linear infinite;
     transform-origin: center;
-    }
+}
 
 @keyframes rotator {
-  0% {
-    transform: rotate(0deg);
+    0% {
+        transform: rotate(0deg);
     }
 
-  100% {
-    transform: rotate(360deg);
+    100% {
+        transform: rotate(360deg);
     }
-  }
+}

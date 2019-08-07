@@ -18,43 +18,43 @@
 </template>
 
 <script>
-import classnames from '../../lib/classnames';
-import getClassName from '../../helpers/getClassName';
-import { platform, ANDROID } from '../../lib/platform';
-import Tappable from '../Tappable/Tappable';
+  import classnames from '../../lib/classnames';
+  import getClassName from '../../helpers/getClassName';
+  import {ANDROID, platform} from '../../lib/platform';
+  import Tappable from '../Tappable/Tappable';
 
-const osname = platform();
-const baseClassNames = getClassName('PanelHeaderContent');
+  const osname = platform();
+  const baseClassNames = getClassName('PanelHeaderContent');
 
-export default {
-  components: {
-    Tappable,
-  },
-  computed: {
-    isANDROID () {
-      return osname === ANDROID;
+  export default {
+    components: {
+      Tappable,
     },
-    classNames () {
-      return classnames(baseClassNames);
+    computed: {
+      isANDROID() {
+        return osname === ANDROID;
+      },
+      classNames() {
+        return classnames(baseClassNames);
+      },
+      inComponent() {
+        return this.$listeners.click ? 'Tappable' : 'div';
+      },
+      rootProps() {
+        return this.$listeners.click ? {} : this.$attrs;
+      },
+      inProps() {
+        return this.$listeners.click ? Object.assign({}, this.$attrs, {activeEffectDelay: 200}) : {};
+      },
     },
-    inComponent () {
-      return this.$listeners.click ? 'Tappable' : 'div';
-    },
-    rootProps () {
-      return this.$listeners.click ? {} : this.$attrs;
-    },
-    inProps () {
-      return this.$listeners.click ? Object.assign({}, this.$attrs, {activeEffectDelay: 200}) : {};
-    },
-  },
-  methods: {
-    onClickMethod (e) {
-      this.$emit('click', e);
+    methods: {
+      onClickMethod(e) {
+        this.$emit('click', e);
+      }
     }
   }
-}
 </script>
 
 <style>
-@import './PanelHeaderContent.css'
+  @import './PanelHeaderContent.css';
 </style>

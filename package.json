@@ -6,6 +6,7 @@
     "build": "vue-cli-service build --target lib --name VKUI ./src/index.js",
     "lint": "vue-cli-service lint"
   },
+  "main": "./dist/VKUI.common.js",
   "files": [
     "dist/*",
     "src/*",
@@ -13,20 +14,13 @@
     "*.json",
     "*.js"
   ],
-  "homepage": "https://github.com/quiss/VKUI",
-  "keywords": [
-    "vkui",
-    "vue",
-    "vkontakte",
-    "vk"
-  ],
-  "main": "./dist/VKUI.common.js",
   "dependencies": {
     "@urapywka/vkui-icons": "^0.1.14",
     "@vkontakte/vkui-connect-promise": "^0.1.19",
+    "lodash": "^4.17.10",
     "portal-vue": "^1.5.1",
     "vue": "^2.6.10",
-    "lodash": "^4.17.10"
+    "vue-router": "^3.0.1"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.1.1",
@@ -62,5 +56,12 @@
     "> 1%",
     "last 2 versions",
     "not ie <= 8"
+  ],
+  "homepage": "https://github.com/quiss/VKUI",
+  "keywords": [
+    "vkui",
+    "vue",
+    "vkontakte",
+    "vk"
   ]
 }

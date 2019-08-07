@@ -1,4 +1,3 @@
-
 /**
  * Получает кординату по оси абсцисс из touch- или mouse-события
  *
@@ -25,12 +24,12 @@ const touchEnabled = isClient && 'ontouchstart' in window;
  *
  * @returns {Array} Массив с названиями событий
  */
-function getSupportedEvents () {
-  if (touchEnabled) {
-    return ['touchstart', 'touchmove', 'touchend', 'touchcancel'];
-  }
+function getSupportedEvents() {
+    if (touchEnabled) {
+        return ['touchstart', 'touchmove', 'touchend', 'touchcancel'];
+    }
 
-  return ['mousedown', 'mousemove', 'mouseup', 'mouseleave'];
+    return ['mousedown', 'mousemove', 'mouseup', 'mouseleave'];
 }
 
-export { getSupportedEvents, coordX, coordY, touchEnabled };
+export {getSupportedEvents, coordX, coordY, touchEnabled};

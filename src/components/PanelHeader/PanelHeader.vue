@@ -24,11 +24,11 @@
 </template>
 
 <script>
-import classnames from '../../lib/classnames';
-import getClassName from '../../helpers/getClassName';
-import { platform, IOS } from '../../lib/platform';
+  import classnames from '../../lib/classnames';
+  import getClassName from '../../helpers/getClassName';
+  import {IOS, platform} from '../../lib/platform';
 
-const osname = platform();
+  const osname = platform();
 
 export const baseClassNames = getClassName('PanelHeader');
 
