@@ -19,14 +19,9 @@
                     <VKRadio name="type">Загран</VKRadio>
                 </VKDiv>
                 <VKTextarea top="О себе"/>
-                <VKFormLayoutGroup>
-                    <VKCheckbox>Согласен со всем
-                        <VKLink>этим</VKLink>
-                    </VKCheckbox>
-                    <VKDiv>
-                        <VKCellButton>Зарегистрироваться</VKCellButton>
-                    </VKDiv>
-                </VKFormLayoutGroup>
+
+                <VKCheckbox>Согласен со всем <VKLink>этим</VKLink></VKCheckbox>
+                <VKButton size="xl">Зарегистрироваться</VKButton>
             </VKFormLayout>
         </VKPanel>
     </VKView>

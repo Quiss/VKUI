@@ -1,15 +1,16 @@
 <template>
-  <div :class="classNames">
+  <VKFormField :parentClassNames="classNames">
     <textarea
       v-bind="$attrs"
       :value="value"
+      class="Textarea__el"
       @change="onChangeMethod"
       @focus="$emit('focus')"
       ref="getRef"
       :style="{ height: height + 'px' }"
     />
-    <div v-if="isANDROID" class="Textarea-underline" />
-  </div>
+    <div v-if="isANDROID" class="Textarea-underline"></div>
+  </VKFormField>
 </template>
 
 <script>

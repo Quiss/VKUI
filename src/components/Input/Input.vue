@@ -1,5 +1,5 @@
 <template>
-  <VKFormField :class="classNames">
+  <VKFormField :parentClassNames="classNames">
     <input
             v-bind="$attrs"
             class="Input__el"
@@ -25,9 +25,9 @@ export default {
   data: () => ({
 
   }),
-  components: {
-    Tappable,
-  },
+  // components: {
+  //   FormField,
+  // },
   inject: {
     isWebView: {
       type: Boolean,

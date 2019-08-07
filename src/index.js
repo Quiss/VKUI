@@ -11,6 +11,7 @@ import Epic from './components/Epic/Epic';
 import File from './components/File/File';
 import FixedLayout from './components/FixedLayout/FixedLayout';
 import Footer from './components/Footer/Footer';
+import FormField from './components/FormField/FormField';
 import FormLayout from './components/FormLayout/FormLayout';
 import FormLayoutGroup from './components/FormLayoutGroup/FormLayoutGroup';
 import Gallery from './components/Gallery/Gallery';
@@ -86,6 +87,7 @@ function install(Vue) {
     Vue.component(`VKFile`, File);
     Vue.component(`VKFixedLayout`, FixedLayout);
     Vue.component(`VKFooter`, Footer);
+    Vue.component(`VKFormField`, FormField);
     Vue.component(`VKFormLayout`, FormLayout);
     Vue.component(`VKFormLayoutGroup`, FormLayoutGroup);
     Vue.component(`VKGallery`, Gallery);

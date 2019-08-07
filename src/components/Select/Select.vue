@@ -1,5 +1,5 @@
 <template>
-  <label :class="classNames">
+  <VKFormField :parentClassNames="classNames">
     <select
       @change="onChangeMethod"
       :value="value"
@@ -14,7 +14,7 @@
       <vkui-icon name="dropdown" size="24" />
     </div>
     <div v-if="isANDROID" class="Select-underline" />
-  </label>
+  </VKFormField>
 </template>
 
 <script>

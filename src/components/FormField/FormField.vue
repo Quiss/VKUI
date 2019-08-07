@@ -1,42 +1,32 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import getClassName from '../../helpers/getClassName';
-import classNames from '../../lib/classNames';
+<template>
+    <div :class="classNames">
+        <slot></slot>
+        <div class="FormField__border" />
+    </div>
+</template>
 
-const baseClassName = getClassName('FormField');
 
-const FormField = ({ TagName, className, children, status, getRootRef, ...restProps }) => {
-return (
-<TagName
-        {...restProps}
-        className={classNames(baseClassName, {
-        [`FormField--s-${status}`]: status !== 'default'
-}, className)}
-ref={getRootRef}
->
-{children}
-<div className="FormField__border" />
-</TagName>
-);
-};
+<script>
+    import getClassName from '../../helpers/getClassName';
+    import classnames from '../../lib/classnames'
 
-FormField.propTypes = {
-TagName: PropTypes.string,
-children: PropTypes.node,
-className: PropTypes.string,
-style: PropTypes.object,
-top: PropTypes.node,
-bottom: PropTypes.node,
-getRootRef: PropTypes.oneOfType([
-PropTypes.func,
-PropTypes.shape({ current: PropTypes.instanceOf(Element) })
-]),
-status: PropTypes.oneOf(['default', 'error', 'valid'])
-};
+    const baseClassName = getClassName('FormField');
 
-FormField.defaultProps = {
-status: 'default',
-TagName: 'div'
-};
+    export default {
+        name: 'FormField',
+        props: {
+            parentClassNames: {
+                default: []
+            },
+        },
+        computed: {
+            classNames () {
+                return classnames(baseClassName, this.parentClassNames)
+            },
+        }
+    }
+</script>
 
-export default FormField;
+<style>
+    @import './FormField.css';
+</style>
