@@ -1,13 +1,30 @@
 <template>
-    <VKView activePanel='new-user'>
-        <VKPanel id="new-user" theme="white">
-            <VKPanelHeader>Регистрация</VKPanelHeader>
+    <VKView :activePanel='activePanel'>
+        <VKPanel id="main" theme="white">
+            <VKPanelHeader>Базовая страничка</VKPanelHeader>
+            <VKGroup>
+                <VKCellButton @click="activePanel = 'forms'">
+                    Формы
+                </VKCellButton>
+            </VKGroup>
+        </VKPanel>
+        <VKPanel id="forms" theme="white">
+            <VKPanelHeader>
+                <VKHeaderButton slot="left" @click="activePanel = 'main'"> < </VKHeaderButton>
+                <VKHeaderButton slot="addon" @click="activePanel = 'main'">Назад</VKHeaderButton>
+                Формы <icon_skip_next_48></icon_skip_next_48>
+
+            </VKPanelHeader>
             <VKFormLayout>
                 <VKFormStatus title="Некорректный мобильный номер" state="error">
                     Необходимо корректно ввести номер в международном формате
                 </VKFormStatus>
 
-                <VKInput type="email" top="E-mail" :status=" email ? 'valid' : 'error'" v-model="email" :bottom=" email ? 'Электронная почта введена верно!' : 'Пожалуйста, введите электронную почту'" />
+                <VKSlider :step="0.2" :min="0" :max="1" v-model="slider1" top="Step [0, 1]" />
+                <VKDiv>Slider Value: {{slider1}}</VKDiv>
+
+                <VKInput type="email" top="E-mail" :status=" email ? 'valid' : 'error'" v-model="email"
+                         :bottom=" email ? 'Электронная почта введена верно!' : 'Пожалуйста, введите электронную почту'"/>
 
                 <VKFormLayoutGroup top="Пароль" bottom="Пароль может содержать только латинские буквы и цифры.">
                     <VKInput type="password" placeholder="Введите пароль"/>
@@ -30,7 +47,9 @@
 
                 <VKTextarea top="О себе"/>
 
-                <VKCheckbox>Согласен со всем <VKLink>этим</VKLink></VKCheckbox>
+                <VKCheckbox>Согласен со всем
+                    <VKLink>этим</VKLink>
+                </VKCheckbox>
 
                 <VKButton size="xl">Зарегистрироваться</VKButton>
             </VKFormLayout>
@@ -46,8 +65,9 @@
         name: 'app',
         data: () => {
             return {
-                activePanel: 'panel1',
+                activePanel: 'main',
                 email: '',
+                slider1: 0
             }
         },
         mounted() {
