@@ -31,9 +31,19 @@ export default new Router({
       component: () => import(/* webpackChunkName: "about" */ './views/HeaderButton.vue')
     },
     {
+      path: '/header-context',
+      name: 'header-context',
+      component: () => import(/* webpackChunkName: "about" */ './views/HeaderContext.vue')
+    },
+    {
       path: '/panel-header-content',
       name: 'panel-header-content',
       component: () => import(/* webpackChunkName: "about" */ './views/PanelHeaderContent.vue')
+    },
+    {
+      path: '/epic',
+      name: 'epic',
+      component: () => import(/* webpackChunkName: "about" */ './views/Epic.vue')
     },
     {
       path: '/',

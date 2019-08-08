@@ -21,6 +21,12 @@
                 <router-link to="/panel-header-content">
                     <VKCellButton>Panel Header Content</VKCellButton>
                 </router-link>
+                <router-link to="/header-context">
+                    <VKCellButton>Header Context</VKCellButton>
+                </router-link>
+                <router-link to="/epic">
+                    <VKCellButton>Epic</VKCellButton>
+                </router-link>
 
             </VKGroup>
         </VKPanel>
