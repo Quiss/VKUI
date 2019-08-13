@@ -28,6 +28,10 @@
                     <VKCellButton>Epic</VKCellButton>
                 </router-link>
 
+                <router-link to="/action-popout">
+                    <VKCellButton>Action Popout</VKCellButton>
+                </router-link>
+
             </VKGroup>
         </VKPanel>
     </VKView>

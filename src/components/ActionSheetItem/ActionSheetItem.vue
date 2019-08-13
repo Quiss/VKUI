@@ -3,7 +3,7 @@
             :class="classNames"
             :component="theme === 'cancel' ? 'span' : 'div'"
             v-bind="$attrs"
-            v-on="$listeners"
+            v-on="{ click: () => {}, ...$listeners }"
     >
         <span class="ActionSheetItem__in"><slot></slot></span>
     </Tappable>
@@ -17,6 +17,13 @@
     const baseClassNames = getClassName('ActionSheetItem');
 
     export default {
+        created() {
+          console.log(this.$listeners);
+            this.$listeners.click = () => {};
+        },
+        methods: {
+          pseudoClick() {}
+        },
         props: {
             theme: {
                 type: String,
@@ -25,6 +32,7 @@
             },
             autoclose: {
                 type: Boolean,
+                default: true,
             }
         },
         computed: {

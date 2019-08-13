@@ -46,6 +46,11 @@ export default new Router({
       component: () => import(/* webpackChunkName: "about" */ './views/Epic.vue')
     },
     {
+      path: '/action-popout',
+      name: 'action-popout',
+      component: () => import(/* webpackChunkName: "about" */ './views/ActionPopout.vue')
+    },
+    {
       path: '/',
       name: '',
       component: () => import(/* webpackChunkName: "about" */ './views/Home.vue')

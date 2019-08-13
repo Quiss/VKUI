@@ -62,7 +62,18 @@
         created() {
             this.$slots.default.map((child, i) => {
                 // onClick: this.onItemClick(Child.props.onClick, Child.props.autoclose)
-                this.$slots.default[i].componentOptions.listeners.click = this.onItemClickMethod(child.componentOptions.listeners.click, child.componentOptions.propsData.autoclose);
+                let listeners = this.$slots.default[i].componentOptions.listeners;
+
+                console.log(i , listeners, 'BEFORE');
+
+                if(listeners && listeners.click) {
+                    listeners.click = this.onItemClickMethod(listeners.click, child.componentOptions.propsData.autoclose);
+                } else {
+                    listeners = {}
+                    listeners.click =  this.onItemClickMethod(undefined, child.componentOptions.propsData.autoclose);
+                }
+
+                console.log(i , listeners, 'AFTER')
             });
         },
         mounted() {
