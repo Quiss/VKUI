@@ -2,8 +2,9 @@
     <Tappable
             :class="classNames"
             :component="theme === 'cancel' ? 'span' : 'div'"
+            @click="pseudoClick"
             v-bind="$attrs"
-            v-on="{ click: () => {}, ...$listeners }"
+            v-on="$listeners"
     >
         <span class="ActionSheetItem__in"><slot></slot></span>
     </Tappable>
@@ -17,12 +18,12 @@
     const baseClassNames = getClassName('ActionSheetItem');
 
     export default {
-        created() {
-          console.log(this.$listeners);
-            this.$listeners.click = () => {};
-        },
         methods: {
-          pseudoClick() {}
+            pseudoClick() {
+                if (this.autoclose) {
+                    this.$parent.$parent.$emit('action-sheet-close', true);
+                }
+            }
         },
         props: {
             theme: {
@@ -32,7 +33,7 @@
             },
             autoclose: {
                 type: Boolean,
-                default: true,
+                default: false,
             }
         },
         computed: {

@@ -11,7 +11,7 @@
                     <slot name="title"></slot>
                 </div>
                 <div class="ActionSheet__text" v-if="!!$slots.text">
-                    <slot name="text"></slot>
+                    <slot name="text" ></slot>
                 </div>
             </header>
             <slot></slot>
@@ -64,20 +64,21 @@
                 // onClick: this.onItemClick(Child.props.onClick, Child.props.autoclose)
                 let listeners = this.$slots.default[i].componentOptions.listeners;
 
-                console.log(i , listeners, 'BEFORE');
-
                 if(listeners && listeners.click) {
                     listeners.click = this.onItemClickMethod(listeners.click, child.componentOptions.propsData.autoclose);
                 } else {
-                    listeners = {}
-                    listeners.click =  this.onItemClickMethod(undefined, child.componentOptions.propsData.autoclose);
+                    //listeners = {}
+                    //listeners.click =  this.onItemClickMethod(undefined, child.componentOptions.propsData.autoclose);
                 }
 
-                console.log(i , listeners, 'AFTER')
             });
         },
         mounted() {
             this.el = this.$refs.getRef;
+
+            this.$on('action-sheet-close', () => {
+                this.onCloseMethod();
+            });
         },
         methods: {
             onCloseMethod() {
