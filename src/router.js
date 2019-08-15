@@ -51,6 +51,16 @@ export default new Router({
       component: () => import(/* webpackChunkName: "about" */ './views/ActionPopout.vue')
     },
     {
+      path: '/alerts',
+      name: 'alerts',
+      component: () => import(/* webpackChunkName: "about" */ './views/Alerts.vue')
+    },
+    {
+      path: '/screen-spinner',
+      name: 'screen-spinner',
+      component: () => import(/* webpackChunkName: "about" */ './views/ScreenSpinner.vue')
+    },
+    {
       path: '/',
       name: '',
       component: () => import(/* webpackChunkName: "about" */ './views/Home.vue')

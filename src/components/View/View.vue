@@ -21,6 +21,10 @@
                 if (typeof panel.data === 'undefined') {
                     return false
                 } else {
+                    console.log(panel);
+                    if(!panel.data.hasOwnProperty('attrs')) {
+                        return false;
+                    }
                     return this.state.visiblePanels.indexOf(panel.data.attrs.id) > -1 ||
                         panel.data.attrs.id === this.state.swipeBackPrevPanel ||
                         panel.data.attrs.id === this.state.swipeBackNextPanel;

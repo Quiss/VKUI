@@ -13,6 +13,7 @@
     const baseClassName = getClassName('ScreenSpinner');
 
     export default {
+        data: () => ({}),
         computed: {
             classNames() {
                 return classnames(baseClassName)

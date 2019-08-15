@@ -32,6 +32,14 @@
                     <VKCellButton>Action Popout</VKCellButton>
                 </router-link>
 
+                <router-link to="/alerts">
+                    <VKCellButton>Alerts</VKCellButton>
+                </router-link>
+
+                <router-link to="/screen-spinner">
+                    <VKCellButton>Screen Spinner</VKCellButton>
+                </router-link>
+
             </VKGroup>
         </VKPanel>
     </VKView>
