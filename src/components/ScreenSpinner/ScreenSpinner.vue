@@ -27,3 +27,7 @@
         },
     }
 </script>
+
+<style>
+    @import './ScreenSpinner.css';
+</style>
