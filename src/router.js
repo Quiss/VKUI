@@ -61,6 +61,11 @@ export default new Router({
       component: () => import(/* webpackChunkName: "about" */ './views/ScreenSpinners.vue')
     },
     {
+      path: '/modals',
+      name: 'modals',
+      component: () => import(/* webpackChunkName: "about" */ './views/Modals.vue')
+    },
+    {
       path: '/',
       name: '',
       component: () => import(/* webpackChunkName: "about" */ './views/Home.vue')

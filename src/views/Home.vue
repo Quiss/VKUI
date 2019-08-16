@@ -40,6 +40,10 @@
                     <VKCellButton>Screen Spinner</VKCellButton>
                 </router-link>
 
+                <router-link to="/modals">
+                    <VKCellButton>Modals</VKCellButton>
+                </router-link>
+
             </VKGroup>
         </VKPanel>
     </VKView>
