@@ -58,7 +58,7 @@ export default new Router({
     {
       path: '/screen-spinner',
       name: 'screen-spinner',
-      component: () => import(/* webpackChunkName: "about" */ './views/ScreenSpinner.vue')
+      component: () => import(/* webpackChunkName: "about" */ './views/ScreenSpinners.vue')
     },
     {
       path: '/',

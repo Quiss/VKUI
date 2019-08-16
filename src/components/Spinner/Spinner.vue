@@ -1,13 +1,6 @@
 <template>
     <div :class="classNames">
-        <svg
-                :style="{ width: size + 'px', height: size + 'px' }"
-                :viewBox="`0 0 ${size} ${size}`"
-                class="Spinner__self"
-                xmlns="http://www.w3.org/2000/svg"
-        >
-            <component :is="component" v-bind="Object.assign({}, $attrs, $props)"/>
-        </svg>
+        <vkui-icon name="spinner" :size="44" class="Spinner__self"/>
     </div>
 </template>
 

@@ -1,12 +1,9 @@
 <template>
-    <VKView activePanel="spinner1">
-        <VKScreenSpinner />
-
-        <VKPanel id="spinner1">
-            <VKPanelHeader>ScreenSpinner</VKPanelHeader>
-            <VKFormLayout>
-                <VKCellButton @click="showSpinner = true">Запустить долгий процесс</VKCellButton>
-            </VKFormLayout>
+    <VKView :header="false" activePanel="spinner_test">
+        <VKScreenSpinner slot="popout"></VKScreenSpinner>
+        <VKPanel id="spinner_test">
+            <VKCellButton @click="showAlertOne = true">Добавить право</VKCellButton>
+            <VKCellButton level="danger" @click="showAlertSecond = true">Лишить права</VKCellButton>
         </VKPanel>
     </VKView>
 </template>

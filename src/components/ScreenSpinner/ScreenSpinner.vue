@@ -1,6 +1,8 @@
 <template>
     <PopoutWrapper :class="classNames">
-        <Spinner v-bind="$attrs"/>
+        <div class="ScreenSpinner__container">
+            <Spinner v-bind="$attrs"/>
+        </div>
     </PopoutWrapper>
 </template>
 
