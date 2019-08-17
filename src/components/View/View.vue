@@ -248,6 +248,13 @@
                             class: 'View__popout',
                         },
                         [this.$slots.popout]
+                    ),
+                    !!this.$slots.modal && createElement(
+                        'div',
+                        {
+                            class: 'View__modal',
+                        },
+                        [this.$slots.modal]
                     )
                 ]
             )
@@ -332,6 +339,9 @@
             popout() {
                 return this.$slots.popout;
             },
+            modal() {
+                return this.$slots.modal;
+            },
             viewClassNames() {
                 const modifiers = {
                     'View--header': !!this.header,
@@ -367,6 +377,11 @@
         watch: {
             // TODO ? есть ли смысл ?
             popout: function (val, oldVal) {
+                if (val && !oldVal) {
+                    this.blurActiveElement();
+                }
+            },
+            modal: function (val, oldVal) {
                 if (val && !oldVal) {
                     this.blurActiveElement();
                 }

@@ -10,12 +10,12 @@
 </template>
 
 <script>
-  import Tappable, {ACTIVE_EFFECT_DELAY} from '../Tappable/Tappable';
-  import getClassName from '../../helpers/getClassName';
-  import classnames from '../../lib/classnames';
-  import {IOS, platform} from '../../lib/platform';
+    import Tappable, {ACTIVE_EFFECT_DELAY} from '../Tappable/Tappable';
+    import getClassName from '../../helpers/getClassName';
+    import classnames from '../../lib/classnames';
+    import {IOS, platform} from '../../lib/platform';
 
-  const osname = platform();
+    const osname = platform();
     const baseClassName = getClassName('TabsItem');
 
     export default {

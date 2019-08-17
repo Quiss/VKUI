@@ -46,6 +46,9 @@ import Tappable from './components/Tappable/Tappable';
 import Textarea from './components/Textarea/Textarea';
 import Touch from './components/Touch/Touch';
 import View from './components/View/View';
+import ModalRoot from "./components/ModalRoot/ModalRoot";
+import ModalCard from "./components/ModalCard/ModalCard";
+
 
 import './lib/polyfills';
 import './styles/common.css';
@@ -123,6 +126,8 @@ function install(Vue) {
     Vue.component(`VKTextarea`, Textarea);
     Vue.component(`VKTouch`, Touch);
     Vue.component(`VKView`, View);
+    Vue.component(`VKModalRoot`, ModalRoot);
+    Vue.component(`VKModalCard`, ModalCard);
 
 
     Vue.prototype.$VKUI_OSNAME = platform();

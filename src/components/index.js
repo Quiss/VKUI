@@ -32,6 +32,8 @@ export * from './PopoutWrapper';
 export * from './Progress';
 export * from './Radio';
 export * from './Root';
+export * from './ModalRoot';
+export * from './ModalCard';
 export * from './ScreenSpinner';
 export * from './Select';
 export * from './SelectMimicry';

@@ -5,7 +5,7 @@
     import {ANDROID, platform} from '../../lib/platform';
 
     const osname = platform();
-const baseClassName = getClassName('Root');
+    const baseClassName = getClassName('Root');
 
 export default {
   render: function(createElement) {

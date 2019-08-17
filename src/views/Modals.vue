@@ -1,5 +1,12 @@
 <template>
     <VKView activePanel="modals">
+        <VKModalRoot slot="modal" :activeModal="activeModal">
+            <VKModalCard :id="modals.MODAL_CARD_MONEY_SEND" :onClose="activeModal = null">
+                <div slot="title">Test</div>
+                <div slot="caption">Test Caption</div>
+            </VKModalCard>
+        </VKModalRoot>
+
         <VKPanel id="modals">
             <VKPanelHeader>Модальные окна</VKPanelHeader>
 
@@ -9,7 +16,7 @@
                     Открыть модальную страницу
                     </VKButton>
 
-                    <VKButton size="xl" level="secondary">
+                    <VKButton size="xl" level="secondary" @click="activeModal = modals.MODAL_CARD_MONEY_SEND">
                     Открыть модальные карточки
                     </VKButton>
                 </VKFormLayout>
@@ -19,23 +26,25 @@
 </template>
 
 <script>
-    const MODAL_PAGE_FILTERS = 'filters';
-    const MODAL_PAGE_COUNTRIES = 'countries';
-    const MODAL_PAGE_STORY_FEEDBACK = 'story-feedback';
-    const MODAL_PAGE_USER_INFO = 'user-info';
-
-    const MODAL_CARD_MONEY_SEND = 'money-send';
-    const MODAL_CARD_APP_TO_MENU = 'app-to-menu';
-    const MODAL_CARD_ABOUT = 'say-about';
-    const MODAL_CARD_NOTIFICATIONS = 'notifications';
-    const MODAL_CARD_CHAT_INVITE = 'chat-invite';
-
     export default {
         name: 'Modals',
         data: () => {
             return {
                 activeModal: null,
-                modalHistory: []
+                modalHistory: [],
+                modals: {
+                    MODAL_PAGE_FILTERS: 'filters',
+                    MODAL_PAGE_COUNTRIES: 'countries',
+                    MODAL_PAGE_STORY_FEEDBACK: 'story-feedback',
+                    MODAL_PAGE_USER_INFO: 'user-info',
+
+                    MODAL_CARD_MONEY_SEND: 'money-send',
+                    MODAL_CARD_APP_TO_MENU: 'app-to-menu',
+                    MODAL_CARD_ABOUT: 'say-about',
+                    MODAL_CARD_NOTIFICATIONS: 'notifications',
+                    MODAL_CARD_CHAT_INVITE: 'chat-invite',
+
+                }
             }
         },
     }
