@@ -25,7 +25,7 @@
                 return classnames(baseClassName, {
                     [`Button--sz-${this.size}`]: true,
                     [`Button--lvl-${this.level}`]: true,
-                    [`Button--aln-${this.align || 'center'}`]: true,
+                    [`Button--aln-${this.align && this.stretched === false || 'center'}`]: true,
                     [`Button--str`]: this.stretched
                 })
             },

@@ -66,6 +66,21 @@ export default new Router({
       component: () => import(/* webpackChunkName: "about" */ './views/Modals.vue')
     },
     {
+      path: '/buttons',
+      name: 'buttons',
+      component: () => import(/* webpackChunkName: "about" */ './views/Buttons.vue')
+    },
+    {
+      path: '/cell-buttons',
+      name: 'cell-buttons',
+      component: () => import(/* webpackChunkName: "about" */ './views/CellButtons.vue')
+    },
+    {
+      path: '/div',
+      name: 'div',
+      component: () => import(/* webpackChunkName: "about" */ './views/DivTest.vue')
+    },
+    {
       path: '/',
       name: '',
       component: () => import(/* webpackChunkName: "about" */ './views/Home.vue')

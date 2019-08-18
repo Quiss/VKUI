@@ -44,6 +44,18 @@
                     <VKCellButton>Modals</VKCellButton>
                 </router-link>
 
+                <router-link to="/buttons">
+                    <VKCellButton>Buttons</VKCellButton>
+                </router-link>
+
+                <router-link to="/cell-buttons">
+                    <VKCellButton>Cell Buttons</VKCellButton>
+                </router-link>
+
+                <router-link to="/div">
+                    <VKCellButton>Div</VKCellButton>
+                </router-link>
+
             </VKGroup>
         </VKPanel>
     </VKView>
