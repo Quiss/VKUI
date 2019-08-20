@@ -56,6 +56,14 @@
                     <VKCellButton>Div</VKCellButton>
                 </router-link>
 
+                <router-link to="/headers">
+                    <VKCellButton>Headers</VKCellButton>
+                </router-link>
+
+                <router-link to="/groups">
+                    <VKCellButton>Groups</VKCellButton>
+                </router-link>
+
             </VKGroup>
         </VKPanel>
     </VKView>

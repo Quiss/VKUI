@@ -81,6 +81,16 @@ export default new Router({
       component: () => import(/* webpackChunkName: "about" */ './views/DivTest.vue')
     },
     {
+      path: '/headers',
+      name: 'headers',
+      component: () => import(/* webpackChunkName: "about" */ './views/Headers.vue')
+    },
+    {
+      path: '/groups',
+      name: 'groups',
+      component: () => import(/* webpackChunkName: "about" */ './views/Groups.vue')
+    },
+    {
       path: '/',
       name: '',
       component: () => import(/* webpackChunkName: "about" */ './views/Home.vue')
