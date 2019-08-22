@@ -16,7 +16,12 @@
                 <div class="Cell__checkbox-marker" v-if="selectable && isIOS">
                     <vkui-icon name="done" size="16"/>
                 </div>
-                <div @click="activateRemove" class="Cell__remove-marker" v-if="removable && isIOS"/>
+                <div @click="activateRemove" class="Cell__remove-marker" v-if="removable && isIOS"></div>
+
+                <Touch className="Cell__dragger" v-if="isANDROID && draggable">
+                    <vkui-icon name="reorder" :size="24"/>
+                </Touch>
+
                 <div class="Cell__before-in" v-if="!!$slots.before">
                     <slot name="before"></slot>
                 </div>
@@ -40,6 +45,10 @@
                     <vkui-icon name="cancel" size="24"/>
                 </div>
                 <vkui-icon class="Cell__chevron" name="chevron" size="24" v-if="isIOS && expandable"/>
+
+                <Touch v-if="isIOS && draggable" class="Cell__dragger" :onStart="onDragStart" :onMoveY="onDragMove" :onEnd="onDragEnd">
+                    <vkui-icon name="reorder" size="24"/>
+                </Touch>
             </div>
         </Tappable>
         <div
@@ -58,6 +67,7 @@
     import getClassName from '../../helpers/getClassName';
     import classnames from '../../lib/classnames';
     import Tappable from '../Tappable/Tappable';
+    import Touch from '../Touch/Touch';
     import {ANDROID, IOS, platform} from '../../lib/platform';
     // TODO import icons ?
 
@@ -69,6 +79,7 @@
             state: {
                 isRemoveActivated: false,
                 removeOffset: 0,
+                dragging: false
             },
             rootProps: {},
             inputProps: {},
@@ -121,6 +132,13 @@
             onRemove: {
                 type: Function,
             },
+            draggable: {
+                type: Boolean,
+                default: false,
+            },
+            onDragFinish: {
+                type: Function,
+            },
             /**
              * iOS only. Текст в выезжаеющей кнопке для удаления ячейки.
              */
@@ -144,7 +162,9 @@
                     'Cell--expandable': this.expandable,
                     'Cell--multiline': this.multiline,
                     [`Cell--${this.size}`]: this.size,
-                    'Cell--removing': this.state.removing
+                    'Cell--removing': this.state.removing,
+                    'Cell--dragging': this.state.dragging,
+                    'Cell--draggable': this.draggable
                 })
             },
             stateIsRemoveActivated() {
@@ -160,6 +180,7 @@
         },
         components: {
             Tappable,
+            Touch
         },
         created() {
             this.rootProps = this.selectable ? {} : this.$attrs;
@@ -203,7 +224,62 @@
                 e.stopImmediatePropagation(); // TODO стало ?
                 e.preventDefault();
                 this.onRemove && this.onRemove(e, this.$el);
+                this.deactivateRemove();
             },
+
+            onDragStart() {
+                this.state.dragging = true;
+                this.dragShift = 0;
+                this.listEl = this.$el.closest('.List');
+                this.listEl && this.$el.classList.add('List--dragging');
+                this.siblings = Array.prototype.slice.call(this.$el.parentElement.childNodes);
+                this.dragStartIndex = this.siblings.indexOf(this.$el);
+            },
+
+            onDragMove(e) {
+                e.originalEvent.preventDefault();
+                if (this.state.removeOffset) return;
+
+                this.$el.style.transform = `translateY(${e.shiftY}px)`;
+                const rootGesture = this.$el.getBoundingClientRect();
+                this.dragDirection = this.dragShift - e.shiftY < 0 ? 'down' : 'up';
+                this.dragShift = e.shiftY;
+                this.dragEndIndex = this.dragStartIndex;
+
+                this.siblings.forEach((sibling, siblingIndex) => {
+                    const siblingGesture = sibling.getBoundingClientRect();
+                    if (this.dragStartIndex < siblingIndex) {
+                        if (rootGesture.bottom > siblingGesture.top + siblingGesture.height / 2) {
+                            if (this.dragDirection === 'down') sibling.style.transform = `translateY(-100%)`;
+                            this.dragEndIndex++;
+                        }
+                        if (rootGesture.top < siblingGesture.bottom - siblingGesture.height / 2 && this.dragDirection === 'up') {
+                            sibling.style.transform = `translateY(0)`;
+                        }
+                    } else if (this.dragStartIndex > siblingIndex) {
+                        if (rootGesture.top < siblingGesture.bottom - siblingGesture.height / 2) {
+                            if (this.dragDirection === 'up') sibling.style.transform = `translateY(100%)`;
+                            this.dragEndIndex--;
+                        }
+                        if (rootGesture.bottom > siblingGesture.top + siblingGesture.height / 2 && this.dragDirection === 'down') {
+                            sibling.style.transform = `translateY(0)`;
+                        }
+                    }
+                });
+            },
+
+            onDragEnd() {
+                this.state.dragging = false;
+                this.listEl && this.listEl.classList.remove('List--dragging');
+                this.onDragFinish && this.onDragFinish({from: this.dragStartIndex, to: this.dragEndIndex});
+                this.siblings.forEach(sibling => sibling.style.transform = null);
+                delete this.dragShift;
+                delete this.listEl;
+                delete this.siblings;
+                delete this.dragStartIndex;
+                delete this.dragEndIndex;
+                delete this.dragDirection;
+            }
         }
     }
 </script>

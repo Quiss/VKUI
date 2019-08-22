@@ -21,7 +21,6 @@
                 if (typeof panel.data === 'undefined') {
                     return false
                 } else {
-                    console.log(panel);
                     if(!panel.data.hasOwnProperty('attrs')) {
                         return false;
                     }

@@ -91,6 +91,11 @@ export default new Router({
       component: () => import(/* webpackChunkName: "about" */ './views/Groups.vue')
     },
     {
+      path: '/cells',
+      name: 'cells',
+      component: () => import(/* webpackChunkName: "about" */ './views/Cells.vue')
+    },
+    {
       path: '/',
       name: '',
       component: () => import(/* webpackChunkName: "about" */ './views/Home.vue')

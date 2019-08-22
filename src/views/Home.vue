@@ -64,6 +64,10 @@
                     <VKCellButton>Groups</VKCellButton>
                 </router-link>
 
+                <router-link to="/cells">
+                    <VKCellButton>Cells</VKCellButton>
+                </router-link>
+
             </VKGroup>
         </VKPanel>
     </VKView>
