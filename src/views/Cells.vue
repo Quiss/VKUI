@@ -47,6 +47,38 @@
                 </VKList>
             </VKGroup>
 
+            <VKGroup title="Большая ячейка">
+                <VKList>
+                    <VKCell size="l" description="Друзья в Facebook">
+                        <VKAvatar :size="72" src="https://pp.userapi.com/bC-jIKT2xMr-Y1Wsns1UepeERGeFyZbsPRHfjA/DAfdg3JAMs0.jpg?ava=1" slot="before"></VKAvatar>
+                        <vkui-icon name="more_horizontal" :size="24" slot="asideContent"></vkui-icon>
+                        <div :style="{ display: 'flex' }" slot="bottomContent">
+                            <VKButton size="m">Добавить</VKButton>
+                            <VKButton size="m" level="secondary" :style="{ marginLeft: '8px' }">Скрыть</VKButton>
+                        </div>
+                        Семён Ефимов
+                    </VKCell>
+                    <VKCell size="l" description="29 лет, Санкт-Петербург">
+                        <VKAvatar :size="72" src="https://sun9-24.userapi.com/c845021/v845021895/100e20/zGDq9HET8rY.jpg?ava=1" slot="before"></VKAvatar>
+                        <vkui-icon name="more_horizontal" :size="24" slot="asideContent"></vkui-icon>
+                        <div :style="{ display: 'flex' }" slot="bottomContent">
+                            <VKButton size="m">Добавить</VKButton>
+                            <VKButton size="m" level="secondary" :style="{ marginLeft: '8px' }">Скрыть</VKButton>
+                        </div>
+                        Александр Попов
+                    </VKCell>
+                    <VKCell size="l" description="Команда ВКонтакте">
+                        <VKAvatar :size="72" src="https://sun9-3.userapi.com/c853516/v853516440/6a629/aX-J1THqzdw.jpg?ava=1" slot="before"></VKAvatar>
+                        <vkui-icon name="more_horizontal" :size="24" slot="asideContent"></vkui-icon>
+                        <div :style="{ display: 'flex' }" slot="bottomContent">
+                            <VKButton size="m">Добавить</VKButton>
+                            <VKButton size="m" level="secondary" :style="{ marginLeft: '8px' }">Скрыть</VKButton>
+                        </div>
+                        Екатерина Скобейко
+                    </VKCell>
+                </VKList>
+            </VKGroup>
+
             <VKGroup title="Иконки">
                 <VKList>
                     <VKCell>
@@ -124,8 +156,8 @@
             removeCellElement(i) {
                 this.$set(this, 'removeList', [...this.removeList.slice(0, i), ...this.removeList.slice(i + 1)]);
             },
-            onDragFinish(from, to) {
-                const draggingList = this.draggingList;
+            onDragFinish({from, to}) {
+                const draggingList = [...this.draggingList];
                 draggingList.splice(from, 1);
                 draggingList.splice(to, 0, this.draggingList[from]);
 
