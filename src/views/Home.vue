@@ -68,6 +68,22 @@
                     <VKCellButton>Cells</VKCellButton>
                 </router-link>
 
+                <router-link to="/lists">
+                    <VKCellButton>Lists</VKCellButton>
+                </router-link>
+
+                <router-link to="/footer">
+                    <VKCellButton>Footer</VKCellButton>
+                </router-link>
+
+                <router-link to="/spinner">
+                    <VKCellButton>Spinner</VKCellButton>
+                </router-link>
+
+                <router-link to="/switch">
+                    <VKCellButton>Switch</VKCellButton>
+                </router-link>
+
             </VKGroup>
         </VKPanel>
     </VKView>

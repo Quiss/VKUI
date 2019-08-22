@@ -96,6 +96,26 @@ export default new Router({
       component: () => import(/* webpackChunkName: "about" */ './views/Cells.vue')
     },
     {
+      path: '/lists',
+      name: 'lists',
+      component: () => import(/* webpackChunkName: "about" */ './views/Lists.vue')
+    },
+    {
+      path: '/footer',
+      name: 'footer',
+      component: () => import(/* webpackChunkName: "about" */ './views/FooterTest.vue')
+    },
+    {
+      path: '/spinner',
+      name: 'spinner',
+      component: () => import(/* webpackChunkName: "about" */ './views/Spinners.vue')
+    },
+    {
+      path: '/switch',
+      name: 'switch',
+      component: () => import(/* webpackChunkName: "about" */ './views/Switchs.vue')
+    },
+    {
       path: '/',
       name: '',
       component: () => import(/* webpackChunkName: "about" */ './views/Home.vue')

@@ -1,6 +1,6 @@
 <template>
     <div :class="classNames">
-        <vkui-icon name="spinner" :size="44" class="Spinner__self"/>
+        <vkui-icon name="spinner" :size="spinnerSize" class="Spinner__self"/>
     </div>
 </template>
 
@@ -34,6 +34,18 @@
             component() {
                 return this.isIOS ? 'IosSpinner' : 'AndroidSpinner';
             },
+            spinnerSize() {
+                switch (this.size) {
+                    case 'large':
+                        return 44;
+                    case 'medium':
+                        return 32;
+                    case 'small':
+                        return 16;
+                    default:
+                        return 24;
+                }
+            }
         },
         components: {
             AndroidSpinner,
@@ -41,10 +53,9 @@
         },
         props: {
             size: {
-                type: Number,
-                default: function () {
-                    return this.isANDROID ? 38 : 20
-                },
+                type: String,
+                default: 'regular',
+                validator: (v) => ['small', 'regular', 'large', 'medium'].indexOf(v) >= 0
             },
             androidStrokeWidth: {
                 type: Number,
