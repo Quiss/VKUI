@@ -4,7 +4,9 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib --name VKUI ./src/index.js",
-    "lint": "vue-cli-service lint"
+    "lint": "vue-cli-service lint",
+    "styleguide": "vue-cli-service styleguidist",
+    "styleguide:build": "vue-cli-service styleguidist:build"
   },
   "main": "./dist/VKUI.common.js",
   "files": [
@@ -20,7 +22,8 @@
     "lodash": "^4.17.10",
     "portal-vue": "^1.5.1",
     "vue": "^2.6.10",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vue-safe-iframe": "^1.0.4"
   },
   "devDependencies": {
     "@vue/cli-plugin-babel": "^3.1.1",
@@ -31,6 +34,9 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "eslint": "^5.16.0",
     "eslint-plugin-vue": "^5.2.2",
+    "vue-cli-plugin-styleguidist": "^3.22.1",
+    "react-frame-component": "^3.0.0",
+    "react-styleguidist": "^7.0.17",
     "vue-template-compiler": "^2.6.10"
   },
   "eslintConfig": {
